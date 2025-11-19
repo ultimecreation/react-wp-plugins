@@ -1,0 +1,39 @@
+{
+	"name": "boilerplate",
+	"version": "0.1.0",
+	"description": "Example block scaffolded with Create Block tool.",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build --blocks-manifest",
+		"format": "wp-scripts format &&  stylelint \"**/*.scss\"  --fix",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --blocks-manifest",
+		"prepare": "husky"
+	},
+	"prettier": "@wordpress/prettier-config",
+	"stylelint": {
+		"extends": "@wordpress/stylelint-config/scss"
+	},
+	"lint-staged": {
+		"*.js": [
+			"wp-scripts lint-js",
+			"wp-scripts format"
+		],
+		"*.scss": "npw stylelint --fix"
+	},
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^22.20.0",
+		"@wordpress/prettier-config": "^4.34.0",
+		"@wordpress/scripts": "^30.27.0",
+		"@wordpress/stylelint-config": "^23.26.0",
+		"eslint-config-prettier": "^10.1.8",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.2.6",
+		"stylelint": "^16.25.0"
+	}
+}
