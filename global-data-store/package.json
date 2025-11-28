@@ -13,7 +13,10 @@
     "@wordpress/scripts": "^31.0.0"
   },
   "dependencies": {
+    "@wordpress/components": "^30.8.0",
     "@wordpress/data": "^10.35.0",
-    "@wordpress/i18n": "^6.8.0"
+    "@wordpress/edit-post": "^8.35.0",
+    "@wordpress/i18n": "^6.8.0",
+    "@wordpress/plugins": "^7.35.0"
   }
 }
